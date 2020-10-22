@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        outline: none;
+    }
+    form input{
+        border: none;
+        border-bottom: black 2px solid;
+    }
+    body{
+        background-image:  url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fi.imgur.com%2F5dnWF47.png&f=1&nofb=1");
+        display: grid;
+        place-items: center;
+        margin: 10%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .Container{
+        
+        width: 100%;
+        background-color: rgb(199, 196, 196);
+        border-radius: 2em;
+        
+    }
+    .Title{
+        color: rgb(150, 26, 26);
+        font-size: 300%;
+        text-align: center;
+        margin: 5%;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    .p{
+        color: black;
+        font-size: 200%;
+        margin: 5%;
+        border-bottom: 2px solid gray;
+    }
+    form{
+        display: fixed;
+        justify-content: center;
+        align-items: center;
+        margin: 5%;
+    }
+    form input{
+        background-color: rgb(199, 196, 196);
+        font-size: 200%;
+    }
+    form button{
+        font-size: 200%;
+        padding: 1%;
+        color: white;
+        background-color: #333;
+        border-radius: 2em;
+    }
+    form img{}
+    .vid{
+        width: 100%;
+    }
+    .video{
+        font-size: 200%;
+        padding: 1%;
+        font-size: 200%;
+        color: white;
+        background-color: #333;
+        border-radius:  2em;
+    }
+    .video a {
+        color: white;
+    }
+    
+    form button:hover{
+        color: red;
+        font-size: 225%;
+    }
+    .video a:hover, .video:hover{
+        color: red;
+        font-size: 200%;
+    }
+  
+    @media only screen and (max-width: 800px){
+        .Title{
+            font-size: 225%
+        }
+        .p{
+            font-size: 150%;
+        }
+        body{
+            margin: 2%;
+        }
+        form input{
+        background-color: rgb(199, 196, 196);
+        font-size: 150%;
+    }
+    form button{
+        font-size: 150%;
+        padding: 1%;
+    }
+    form img{
+        width: 50%;
+        
+    }
+    }
+</style>
+<head>
+    <meta name = "viewport" content="width=device-width , initial scale = 1">
+</head>
+<body>
+    
+<div class ="Container">
+<div class = "Title">
+    Welcome 
+</div>
+<div class = "p">
+    This website is a magical website. It helps with stuff, I guess. Wanna try it? Subscribe now! It only costs 500$ a month...
+</div>
+<form>
+    <center>
+    <input id="in" placeholder="username">
+    <br><br>
+    <input id ="in2" placeholder="password" type="password">
+    <br><br> 
+    <script>
+        function reg(){
+            window.open("reg.html");
+        }
+        function sign(){
+            var user = document.getElementById('in').value;
+            var pass = document.getElementById('in2').value;
+            document.getElementById('ss').innerHTML = "The username " + "<span style='color:red'> " + user + "</span>" + " and the password " + "<span style='color:red'>" + pass + "</span>" + " do not exist. Register, maybe?";
+            user.style.color = 'red';
+            pass.style.color = 'red';
+        }
+    </script>
+    <button type="button" onclick="reg()">Register</button> <button type = "button" onclick="sign()">Sign in</button>
+    </center>
+</form>
+<center>
+    <br><br>
+    <center>
+        <button class="video"><a href="RLMV.mp4">Download</a></button>
+    </center>
+    <div class = "p" id="ss">
+
+    </div>
+    <br>
+    <video loop="" muted="" autoplay="" playsinline="" poster="https://steamcdn-a.akamaihd.net/steam/clusters/frontpage/54a1c1b113b1d7062bae7c64/page_bg_english.jpg?t=1603308636" class="vid">
+        <source src="https://steamcdn-a.akamaihd.net/steam/clusters/frontpage/54a1c1b113b1d7062bae7c64/webm_page_bg_english.webm?t=1603308636" type="video/webm">
+                                    <source src="https://steamcdn-a.akamaihd.net/steam/clusters/frontpage/54a1c1b113b1d7062bae7c64/mp4_page_bg_english.mp4?t=1603308636" type="video/mp4">
+                            </video>
+                            <br><br><br>
+</center>
+</div>
+</body>
